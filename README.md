@@ -1,3 +1,4 @@
+
 # Proyecto de Alquiler de Vehículos con Django Rest Framework
 
 Este proyecto es una API RESTful para la gestión de alquileres de vehículos. La aplicación permite gestionar vehículos, clientes, ubicaciones y alquileres a través de una serie de endpoints.
@@ -68,7 +69,6 @@ Este proyecto es una API RESTful para la gestión de alquileres de vehículos. L
 * **GET** `/vehiculos/<id>/`: Obtiene los detalles de un vehículo específico.
 * **PUT** `/vehiculos/<id>/`: Actualiza la información de un vehículo.
 * **DELETE** `/vehiculos/<id>/`: Elimina un vehículo.
-* **GET** `/vehiculos/disponibles/`: Obtiene la lista de vehículos disponibles.
 
 ### 3. **Cliente** (`/clientes/`)
 
@@ -86,7 +86,9 @@ Este proyecto es una API RESTful para la gestión de alquileres de vehículos. L
 * **PUT** `/alquileres/<id>/`: Actualiza la información de un alquiler.
 * **DELETE** `/alquileres/<id>/`: Elimina un alquiler.
 
-#### Endpoints Personalizados en Alquiler
+---
+
+#### Endpoints Personalizados
 
 * **POST** `/alquileres/calcular-costo/`: Calcula el costo total del alquiler de un vehículo en función de las fechas proporcionadas. **Campos requeridos**:
 
@@ -132,6 +134,10 @@ Este proyecto es una API RESTful para la gestión de alquileres de vehículos. L
   }
   ```
 
+* **GET** `/vehiculos/disponibles/`: Obtiene la lista de vehículos disponibles.
+
+---
+
 ## Seeder
 
 Para generar datos de prueba (vehículos, clientes, alquileres), puedes utilizar el siguiente comando:
@@ -141,3 +147,10 @@ python manage.py seed_data
 ```
 
 Este comando crea datos de ejemplo, incluyendo vehículos disponibles y no disponibles, y clientes con sus respectivos alquileres.
+
+```
+
+### Cambios realizados:
+- Los **endpoints básicos** ahora están listados primero, seguidos por los **endpoints personalizados**.
+- El endpoint de vehículos disponibles (`/vehiculos/disponibles/`) se ha movido a la sección de **endpoints personalizados**.
+```
